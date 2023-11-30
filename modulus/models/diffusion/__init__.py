@@ -26,3 +26,5 @@ from .song_unet import SongUNet
 from .dhariwal_unet import DhariwalUNet
 from .unet import UNet
 from .preconditioning import EDMPrecond, VEPrecond, VPPrecond, iDDPMPrecond
+
+from .guidance import GuidanceNet
