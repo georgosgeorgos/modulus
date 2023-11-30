@@ -13,8 +13,7 @@
 # limitations under the License.
 
 """
-Model architectures used in the paper "Elucidating the Design Space of 
-Diffusion-Based Generative Models".
+Model architectures used in the paper "Diffusion models beat gans on image synthesis".
 """
 
 from dataclasses import dataclass
@@ -231,6 +230,7 @@ class GuidanceNet(Module):
             skips.append(x)
             
         # Pooling.
+        ## TODO: Add support for other pooling methods
         x = self.out["linear_in"](x)
         x = self.out["group_norm"](x)
         x = silu(x)
